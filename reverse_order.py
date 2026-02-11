@@ -1,8 +1,9 @@
-num = input("Enter a number: ")
+num = int(input("Enter a number: "))
 
-if num[0] == '-':
-    num = num[1:]
+count = 0
 
-digit_count = len(num)
+while num > 0:
+    num = num // 10
+    count = count + 1
 
-print("Total number of digits:", digit_count)
+print("Total number of digits:", count)
