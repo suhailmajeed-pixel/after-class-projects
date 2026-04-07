@@ -1,9 +1,19 @@
-n = int(input("How many numbers will you enter? "))
+try:
+    base = int(input("Enter the base number: "))
+    exponent = int(input("Enter the power (exponent): "))
 
-count = 0
+    result = 1
 
-for i in range(n):
-    num = int(input("Enter a number: "))
-    count = count + 1
+    if exponent >= 0:
+        for i in range(exponent):
+            result *= base
+    else:
+        for i in range(-exponent):
+            result *= base
+        result = 1 / result
 
-print("Total numbers entered:", count)
+    print("Result:", result)
+
+except ValueError:
+    print("Error! Please enter valid integer values.")
+
