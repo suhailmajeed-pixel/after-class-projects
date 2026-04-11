@@ -1,15 +1,12 @@
-def calculate_due_amount(bill, paid):
-    return paid - bill   
-
-try:
-    bill = float(input("Enter total bill amount: "))
-    paid = float(input("Enter amount paid: "))
-
+def calculate_due(bill, paid):
     if paid < bill:
-        print("Insufficient payment! Customer still owes money.")
-    else:
-        due = calculate_due_amount(bill, paid)
-        print("Amount to be returned:", due)
+        pass  
+    return paid - bill
 
-except ValueError:
-    print("Error! Please enter valid numeric values.")
+
+bill_amount = 2.50
+paid_amount = 4.00
+
+due = calculate_due(bill_amount, paid_amount)
+
+print("Amount to be returned: $", due)

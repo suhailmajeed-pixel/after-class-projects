@@ -1,19 +1,12 @@
-try:
-    base = int(input("Enter the base number: "))
-    exponent = int(input("Enter the power (exponent): "))
+base = int(input("Enter the base number: "))
+power = int(input("Enter the power: "))
 
-    result = 1
+result = 1
+i = 0
 
-    if exponent >= 0:
-        for i in range(exponent):
-            result *= base
-    else:
-        for i in range(-exponent):
-            result *= base
-        result = 1 / result
+while i < power:
+    result = result * base
+    i += 1
 
-    print("Result:", result)
-
-except ValueError:
-    print("Error! Please enter valid integer values.")
+print("Result:", result)
 
